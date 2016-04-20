@@ -1,0 +1,254 @@
+#reservation-container {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+#reservation-container>h3 {
+    font-size: 2em;
+    font-family: Pseudonym;
+    color: #252525;
+}
+
+#reservation-container>form>table {
+    width: 500px;
+    margin: auto;
+    font-family: Pseudonym;
+    font-size: 1em;
+}
+
+#reservation-container>form>table td {
+    height: 40px;
+    vertical-align: middle;
+}
+
+#reservation-container>form>table td:first-child {
+    width: 170px;
+}
+
+#reservation-container>form>table td input[type="text"] {
+    height: 30px;
+    width: 100%;
+    border-radius: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-family: Open-Sans;
+    font-size: 0.9em;
+    border-style: none;
+    margin: 0;
+    margin-left: 6px;
+    box-shadow: inset 0px 0px 0px 1px #252525;
+}
+
+#reservation-container>form>table td select {
+    height: 30px;
+    width: 37px;
+    margin-left: 6px;
+    font-family: Open-Sans;
+    font-size: 0.9em;
+}
+
+#reservation-container>form>table td[colspan="3"] {
+    text-align: center;
+}
+
+#reservation-container>form>table td input[type="submit"] {
+    margin-top: 16px;
+    margin-bottom: 12px;
+    height: 32px;
+    width: 120px;
+    background-color: #252525;
+    color: #fff;
+    font-family: Pseudonym;
+    font-size: 1em;
+    border-style: none;
+    cursor: pointer;
+}
+
+#reservation-container>form>table td input[type="submit"]:hover {
+    background-color: #fff;
+    color: #252525;
+    box-shadow: inset 0px 0px 0px 2px #252525;
+}
+
+#reservation-container>form[name="buy2"] {
+    display: none;
+}
+
+#reservation-container > form[name="buy2"] > table td input[type="text"] {
+    margin: 0;
+    margin-left: 0;
+}
+
+#reservation-container > form[name="buy2"] > table td select {
+    margin: 0;
+    margin-left: 0;
+}
+
+#reservation-container > form[name="buy2"] > table {
+    width: 90%;
+    margin: auto;
+}
+
+@media only screen and (max-width: 660px) {
+    #reservation-container>form[name="buy"] {
+        display: none;
+    }
+    #reservation-container>form[name="buy2"] {
+        display: inherit;
+    }
+}
+
+
+/* Calendar */
+
+#ui-datepicker-div {
+    z-index: 999999;
+    background-color: #fff;
+    border: 1px solid #d3d3d3;
+    border-radius: 3px;
+    text-align: center;
+    margin-top: 10px;
+    display: none;
+    font-family: Open-Sans;
+    font-size: 1em;
+    color: #252525;
+}
+
+.ui-datepicker-title {
+    background-color: #252525;
+    margin: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border: 1px solid #252525;
+    border-radius: 3px;
+    color: #fff;
+}
+
+.ui-datepicker-prev,
+.ui-datepicker-next {
+    position: absolute;
+    -webkit-user-select: none;
+    /* Chrome/Safari */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* IE10+ */
+    -o-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    background: #252525;
+    color: #fff;
+    min-width: 32px !important;
+    min-height: 20px !important;
+    border-radius: 3px;
+    margin-top: 1px;
+    font-size: 1.3em;
+}
+
+.ui-datepicker-prev:hover,
+.ui-datepicker-next:hover {
+    background: #252525;
+    color: #FFF;
+}
+
+.ui-datepicker-prev {
+    margin-left: 6px;
+    left: 0;
+}
+
+.ui-datepicker-next {
+    margin-right: 6px;
+    right: 0;
+}
+
+.ui-state-disabled {
+    opacity: 0.4;
+}
+
+.ui-state-disabled-a {
+    display: none;
+}
+
+.ui-state-disabled:hover {
+    background: #FFF;
+    color: #333;
+    cursor: default;
+}
+
+#ui-datepicker-div table {
+    border: 0;
+    padding: 5px;
+}
+
+.ui-datepicker-calendar th {
+    min-width: 36px !important;
+    min-height: 26px !important;
+    background-color: #fff;
+    text-align: center;
+    color: #333;
+}
+
+.ui-datepicker-unselectable {
+    background-color: #e6e6e6 !important;
+}
+
+.ui-datepicker-unselectable span {
+    display: block;
+    -webkit-user-select: none;
+    /* Chrome/Safari */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* IE10+ */
+    -o-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+.ui-datepicker-other-month {
+    background-color: #fff !important;
+    border: 0 !important;
+    -webkit-user-select: none;
+    /* Chrome/Safari */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* IE10+ */
+    -o-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+.ui-datepicker-calendar td {
+    min-width: 36px !important;
+    min-height: 26px !important;
+    background-color: #e6e6e6;
+    border: 1px solid #d3d3d3;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.ui-datepicker-calendar a {
+    display: block;
+    -webkit-user-select: none;
+    /* Chrome/Safari */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* IE10+ */
+    -o-user-select: none;
+    user-select: none;
+    color: #333;
+    text-decoration: none;
+    padding: 2px;
+}
+
+.ui-datepicker-calendar a:hover {
+    background-color: #fff;
+    border-radius: 3px;
+}
+
+.ui-datepicker-calendar td:hover {
+    background-color: #fff;
+}

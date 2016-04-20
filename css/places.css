@@ -1,0 +1,690 @@
+#place-container {
+    width: 80%;
+    margin: auto;
+    margin-top: 32px;
+}
+
+#place-container table {
+    width: 100%;
+}
+
+#place-container table #table-left {
+    vertical-align: top;
+}
+
+#table-left #detail-container {
+    width: 95%;
+    margin: 0;
+}
+
+#table-left #detail-container #detail-picture {
+    width: 200px;
+    height: 200px;
+}
+
+#table-left #detail-container #detail-picture img {
+    width: 100%;
+    height: 100%;
+}
+
+#table-left #detail-container #detail-name,
+#table-left #detail-container #detail-rating,
+#table-left #detail-container #detail-distance,
+#table-left #detail-container #detail-price1,
+#table-left #detail-container #detail-price2 {
+    font-family: Pseudonym;
+    font-size: 1.1em;
+    color: #252525;
+}
+
+#table-left #detail-container #detail-rating p,
+#table-left #detail-container #detail-distance p,
+#table-left #detail-container #detail-price1 p,
+#table-left #detail-container #detail-price2 p {
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+#table-left #detail-container #detail-name h6 {
+    font-size: 1.3em;
+    margin: 0;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+#table-left #detail-container #detail-name {
+    height: 40px;
+}
+
+#table-left #detail-container #detail-rating {
+    height: 20px;
+}
+
+#table-left #detail-container #detail-rating i {
+    margin: 0;
+    margin-left: 8px;
+}
+
+#table-left #detail-container #detail-rating #first-star {
+    margin-left: 0;
+}
+
+#table-left #detail-container #detail-rating i {
+    color: #f1c40f;
+}
+
+#table-left > h5 {
+    font-family: Pseudonym;
+    font-size: 1.3em;
+    text-align: center;
+    margin: 32px;
+}
+
+#table-left > h5 > a:hover {
+    color: #7f8c8d
+}
+
+#table-left #place-desc {
+    font-family: Pseudonym;
+    font-size: 1.1em;
+    width: 95%;
+    margin: 0;
+    margin-top: 16px;
+    margin-bottom: 32px;
+}
+
+#table-left #place-desc td {
+    display: table;
+    width: 100%;
+}
+
+#table-left #place-desc #desc {
+    vertical-align: top;
+}
+
+#table-left #place-desc #detail-reserve {
+    text-align: center;
+    vertical-align: top;
+}
+
+#table-left #place-desc #detail-reserve p {
+    margin: auto;
+    margin-top: 16px;
+    background-color: #252525;
+    border: 0;
+    width: 60%;
+    font-family: Pseudonym;
+    font-size: 1.2em;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    padding-top: 7.5px;
+    padding-bottom: 7.5px;
+}
+
+#table-left #place-desc #detail-reserve button {
+    margin-top: 16px;
+    background-color: #252525;
+    border: 0;
+    width: 60%;
+    height: 40px;
+    font-family: Pseudonym;
+    font-size: 1.2em;
+    color: #fff;
+    cursor: pointer;
+}
+
+#table-left #place-desc #detail-reserve button:hover,
+#table-left #place-desc #detail-reserve p:hover {
+    background-color: #fff;
+    color: #252525;
+    box-shadow: inset 0px 0px 0px 2px #252525;
+}
+
+#table-left #review-tab {
+    height: 40px;
+    width: 100%;
+    background-color: #fff;
+}
+
+#table-left #review-tab2 {
+    display: none;
+}
+
+#table-left #review-tab .tabs {
+    padding-top: 9px;
+    padding-bottom: 9px;
+    text-align: center;
+    float: left;
+    font-family: Pseudonym;
+    font-size: 1.1em;
+    border-radius: 5px 5px 0 0;
+}
+
+#table-left input[name="tabs"],
+#review-container #tabs-1,
+#review-container #tabs-2 {
+    display: none;
+}
+
+#table-left input[id="tab1"]:checked ~ #review-container #tabs-1,
+#table-left input[id="tab2"]:checked ~ #review-container #tabs-2 {
+    display: block;
+}
+
+#table-left input[id="tab2"]:checked ~ #review-container {
+    border-radius: 5px;
+}
+
+#table-left #review-tab #tab-1 label {
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 49px;
+    padding-right: 49px;
+    cursor: pointer;
+}
+
+#table-left #review-tab #tab-2 label {
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 30.5px;
+    padding-right: 30.5px;
+    cursor: pointer;
+}
+
+#table-left #review-tab .tabs:hover {
+    background-color: #ecf0f1;
+    padding-bottom: 7px;
+}
+
+#table-left #review-container {
+    width: 95%;
+    margin: 0;
+    margin-top: -2px;
+    margin-bottom: 16px;
+    box-shadow: inset 0px 0px 0px 2px #252525;
+    border-radius: 0 5px 5px 5px;
+}
+
+#table-left input[id="tab1"]:checked ~ #review-tab #tab-1,
+#table-left input[id="tab2"]:checked ~ #review-tab #tab-2 {
+    border-top: solid 2px #252525;
+    border-left: solid 2px #252525;
+    border-right: solid 2px #252525;
+    border-bottom: solid 2px #fff;
+}
+
+#table-left input[id="tab1"]:checked ~ #review-tab #tab-1,
+#table-left input[id="tab2"]:checked ~ #review-tab .tabs {
+    padding-bottom: 5px;
+}
+
+#table-left input[id="tab1"]:checked ~ #review-tab #tab-1 label {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 47px;
+    padding-right: 47px;
+    cursor: default;
+}
+
+#table-left input[id="tab2"]:checked ~ #review-tab #tab-2 label {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 28.5px;
+    padding-right: 28.5px;
+    cursor: default;
+}
+
+#table-left input[id="tab1"]:checked ~ #review-tab #tab-1:hover,
+#table-left input[id="tab2"]:checked ~ #review-tab #tab-2:hover {
+    background-color: #fff;
+}
+
+#review-container #tabs-1 {
+    width: 100%;
+}
+
+#review-container #tabs-1 h5,
+#review-container #tabs-2 h5 {
+    font-family: Pseudonym;
+    font-size: 1.2em;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 24px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+#place-container #tabs-1 .table-review {
+    width: 90%;
+    margin: auto;
+    padding-bottom: 16px;
+}
+
+#place-container #tabs-1 .table-review .review-img {
+    width: 100px;
+    height: 100px;
+    vertical-align: top;
+}
+
+#place-container #tabs-1 .table-review .review-img img {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+
+#place-container #tabs-1 .table-review .review-username {
+    height: 24px;
+    font-family: Pseudonym;
+    font-size: 1em;
+}
+
+#place-container #tabs-1 .table-review .review-star {
+    height: 20px;
+    font-family: Pseudonym;
+    font-size: 1em;
+    color: #f1c40f;
+}
+
+#place-container #tabs-1 .table-review .review-content {
+    font-family: Pseudonym;
+    font-size: 1em;
+    vertical-align: top;
+    max-width: 500px;
+}
+
+#place-container #tabs-1 .table-review .review-username p,
+#place-container #tabs-1 .table-review .review-star p,
+#place-container #tabs-1 .table-review .review-content p {
+    padding-left: 10px;
+    word-wrap: break-word;
+    width: 100%;
+    padding-right: 10px;
+}
+
+#place-container #tabs-1 .table-review .review-star i {
+    padding-right: 6px;
+}
+
+.strips {
+    height: 2px;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 16px;
+    background-color: #252525;
+}
+
+#tabs-2 h5 label {
+    cursor: pointer;
+}
+
+#tabs-2 #form-review input[type="radio"],
+#tabs-2 #form-review2 input[type="radio"] {
+    display: none;
+}
+
+#tabs-2 #form-review {
+    width: 330px;
+    margin: auto;
+    padding-bottom: 14px;
+}
+
+#tabs-2 #form-review2 {
+    width: 90%;
+    margin: auto;
+    padding-bottom: 14px;
+    display: none;
+}
+
+#form-review label,
+#form-review2 label {
+    cursor: pointer;
+    color: #bdc3c7;
+    margin-right: 6px;
+}
+
+#tabs-2 #form-review input[id="one"]:checked ~ label[for="one"],
+#tabs-2 #form-review input[id="two"]:checked ~ label[for="one"],
+#tabs-2 #form-review input[id="two"]:checked ~ label[for="two"],
+#tabs-2 #form-review input[id="three"]:checked ~ label[for="one"],
+#tabs-2 #form-review input[id="three"]:checked ~ label[for="two"],
+#tabs-2 #form-review input[id="three"]:checked ~ label[for="three"],
+#tabs-2 #form-review input[id="four"]:checked ~ label[for="one"],
+#tabs-2 #form-review input[id="four"]:checked ~ label[for="two"],
+#tabs-2 #form-review input[id="four"]:checked ~ label[for="three"],
+#tabs-2 #form-review input[id="four"]:checked ~ label[for="four"],
+#tabs-2 #form-review input[id="five"]:checked ~ label[for="one"],
+#tabs-2 #form-review input[id="five"]:checked ~ label[for="two"],
+#tabs-2 #form-review input[id="five"]:checked ~ label[for="three"],
+#tabs-2 #form-review input[id="five"]:checked ~ label[for="four"],
+#tabs-2 #form-review input[id="five"]:checked ~ label[for="five"] {
+    color: #f1c40f;
+}
+
+#tabs-2 #form-review2 input[id="one"]:checked ~ label[for="one"],
+#tabs-2 #form-review2 input[id="two"]:checked ~ label[for="one"],
+#tabs-2 #form-review2 input[id="two"]:checked ~ label[for="two"],
+#tabs-2 #form-review2 input[id="three"]:checked ~ label[for="one"],
+#tabs-2 #form-review2 input[id="three"]:checked ~ label[for="two"],
+#tabs-2 #form-review2 input[id="three"]:checked ~ label[for="three"],
+#tabs-2 #form-review2 input[id="four"]:checked ~ label[for="one"],
+#tabs-2 #form-review2 input[id="four"]:checked ~ label[for="two"],
+#tabs-2 #form-review2 input[id="four"]:checked ~ label[for="three"],
+#tabs-2 #form-review2 input[id="four"]:checked ~ label[for="four"],
+#tabs-2 #form-review2 input[id="five"]:checked ~ label[for="one"],
+#tabs-2 #form-review2 input[id="five"]:checked ~ label[for="two"],
+#tabs-2 #form-review2 input[id="five"]:checked ~ label[for="three"],
+#tabs-2 #form-review2 input[id="five"]:checked ~ label[for="four"],
+#tabs-2 #form-review2 input[id="five"]:checked ~ label[for="five"] {
+    color: #f1c40f;
+}
+
+#tabs-2 #form-review2 input[id="ones"]:checked ~ label[for="ones"],
+#tabs-2 #form-review2 input[id="twos"]:checked ~ label[for="ones"],
+#tabs-2 #form-review2 input[id="twos"]:checked ~ label[for="twos"],
+#tabs-2 #form-review2 input[id="threes"]:checked ~ label[for="ones"],
+#tabs-2 #form-review2 input[id="threes"]:checked ~ label[for="twos"],
+#tabs-2 #form-review2 input[id="threes"]:checked ~ label[for="threes"],
+#tabs-2 #form-review2 input[id="fours"]:checked ~ label[for="ones"],
+#tabs-2 #form-review2 input[id="fours"]:checked ~ label[for="twos"],
+#tabs-2 #form-review2 input[id="fours"]:checked ~ label[for="threes"],
+#tabs-2 #form-review2 input[id="fours"]:checked ~ label[for="fours"],
+#tabs-2 #form-review2 input[id="fives"]:checked ~ label[for="ones"],
+#tabs-2 #form-review2 input[id="fives"]:checked ~ label[for="twos"],
+#tabs-2 #form-review2 input[id="fives"]:checked ~ label[for="threes"],
+#tabs-2 #form-review2 input[id="fives"]:checked ~ label[for="fours"],
+#tabs-2 #form-review2 input[id="fives"]:checked ~ label[for="fives"] {
+    color: #f1c40f;
+}
+
+#form-review td,
+#form-review2 td {
+    vertical-align: top;
+    font-family: Pseudonym;
+    font-size: 1.1em;
+    padding-bottom: 12px;
+}
+
+#form-review2 td {
+    padding-bottom: 4px;
+}
+
+#form-review #form-review-left {
+    width: 80px;
+}
+
+#form-review #form-review-middle {
+    width: 10px;
+}
+
+#form-review #form-review-right {
+    width: 240px;
+}
+
+.padding-6 {
+    padding-top: 6px;
+}
+
+#form-review textarea,
+#form-review2 textarea {
+    resize: none;
+    width: 240px;
+    border-radius: 5px;
+    border: none;
+    height: 160px;
+    font-family: Pseudonym;
+    box-shadow: inset 0 0 0 1px #252525;
+    padding: 8px;
+}
+
+#form-review2 textarea {
+    width: 100%;
+}
+
+#form-review td[colspan="3"] {
+    text-align: center;
+}
+
+#form-review input[type="submit"],
+#form-review2 input[type="submit"] {
+    width: 180px;
+    border: none;
+    height: 30px;
+    font-family: Pseudonym;
+    color: #fff;
+    font-size: 0.9em;
+    background-color: #252525;
+    cursor: pointer;
+}
+
+#form-review input[type="submit"]:hover,
+#form-review2 input[type="submit"]:hover {
+    color: #252525;
+    box-shadow: inset 0 0 0 2px #252525;
+    background-color: #fff;
+}
+
+#form-review button,
+#form-review2 button {
+    width: 100px;
+    border: none;
+    height: 30px;
+    font-family: Pseudonym;
+    color: #fff;
+    font-size: 0.9em;
+    cursor: pointer;
+    background-color: #252525;
+}
+
+#form-review button:hover,
+#form-review2 button:hover {
+    color: #252525;
+    box-shadow: inset 0 0 0 2px #252525;
+    background-color: #fff;
+}
+
+#tabs-2 form>h6 {
+    margin: 0px;
+    text-align: center;
+    font-family: Pseudonym;
+    font-size: 1.5em;
+    padding-bottom: 12px;
+}
+
+#tabs-2>h6 {
+    margin: 0px;
+    text-align: center;
+    font-family: Pseudonym;
+    font-size: 1.2em;
+    padding-bottom: 12px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+#tabs-2 h5 label:hover {
+    color: #7f8c8d;
+}
+
+#place-container table #table-right {
+    width: 300px;
+    vertical-align: top;
+}
+
+#place-header {
+    height: 36px;
+    width: 100%;
+    background-color: #ecf0f1;
+}
+
+.square {
+    height: 100%;
+    width: 10px;
+    background-color: #252525;
+    float: left;
+}
+
+#place-header p {
+    font-family: Pseudonym;
+    font-size: 20px;
+    color: #252525;
+    float: left;
+    margin: 0;
+    margin-left: 14px;
+    margin-top: 5px;
+}
+
+#table-right #place-other {
+    box-shadow: inset 0px 0px 0px 2px #ecf0f1;
+    margin-top: -1px;
+    margin-bottom: 16px;
+}
+
+#table-right #place-other p {
+    margin: 0;
+}
+
+#table-right #place-other br {
+    line-height: 16px;
+}
+
+.category {
+    font-family: Pseudonym;
+    text-align: left;
+    padding-bottom: 8px;
+}
+
+.category input[type="checkbox"] {
+    display: none;
+}
+
+.category p {
+    margin-bottom: 6px;
+    padding-left: 20px;
+}
+
+.category label {
+    cursor: pointer;
+    font-size: 1.1em;
+    margin-left: 24px;
+}
+
+.category > ul {
+    display: none;
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    color: #252525;
+    list-style: ">  ";
+}
+
+.category li {
+    margin-bottom: 5px;
+    margin-left: 42px;
+    margin-right: 24px;
+}
+
+.category input[id="cat-1-more"]:checked ~ #cat-1,
+.category input[id="cat-2-more"]:checked ~ #cat-2,
+.category input[id="cat-3-more"]:checked ~ #cat-3,
+.category input[id="cat-4-more"]:checked ~ #cat-4,
+.category input[id="cat-5-more"]:checked ~ #cat-5 {
+    display: block;
+}
+
+#place-other {
+    padding-bottom: 24px;
+}
+
+@media only screen and (max-width: 935px) {
+    #place-container table #table-left,
+    #place-container table #table-right {
+        display: table;
+        width: 100%;
+    }
+    #table-left #detail-container {
+        width: 100%;
+    }
+    #table-left #place-desc {
+        width: 100%;
+    }
+    #table-left #review-container {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 530px) {
+    #table-left #detail-container #detail-picture {
+        display: table;
+        margin: auto;
+    }
+    #table-left #detail-container #detail-name {
+        display: table;
+        width: 100%;
+        text-align: center;
+    }
+    #table-left #detail-container #detail-rating {
+        text-align: center;
+    }
+    #table-left #detail-container #detail-name,
+    #table-left #detail-container #detail-rating,
+    #table-left #detail-container #detail-distance,
+    #table-left #detail-container #detail-price1,
+    #table-left #detail-container #detail-price2 {
+        text-align: center;
+    }
+    #table-left #place-desc {
+        text-align: center;
+    }
+    #form-review {
+        display: none;
+    }
+    #review-container #tabs-2 {
+        text-align: center;
+    }
+    #tabs-2 #form-review2 {
+        display: inline-table;
+    }
+    #table-left #detail-container #detail-rating p,
+    #table-left #detail-container #detail-distance p,
+    #table-left #detail-container #detail-price1 p,
+    #table-left #detail-container #detail-price2 p {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    #table-left #review-tab {
+        display: none;
+    }
+    #table-left #review-tab2 {
+        display: block;
+        height: 40px;
+        margin-bottom: 16px;
+    }
+    #table-left #review-tab2 .tabs {
+        float: left;
+        width: 50%;
+        text-align: center;
+    }
+    #table-left #review-tab2 .tabs label {
+        font-family: Pseudonym;
+        font-size: 1.5em;
+        color: #252525;
+        cursor: pointer;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        display: block;
+        border-radius: 5px;
+    }
+    #table-left input[id="tab1"]:checked ~ #review-tab2 .tabs label[for="tab1"],
+    #table-left input[id="tab2"]:checked ~ #review-tab2 .tabs label[for="tab2"] {
+        background-color: #252525;
+        color: #fff;
+        cursor: default;
+    }
+    #table-left #review-tab2 .tabs label:hover {
+        background-color: #252525;
+        color: #fff;
+    }
+    #table-left #review-container {
+        border-radius: 5px;
+    }
+}

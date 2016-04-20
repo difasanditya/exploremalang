@@ -1,0 +1,413 @@
+#profile-container {
+    width: 80%;
+    margin: auto;
+    margin-top: 32px;
+    text-align: center;
+    font-family: Pseudonym;
+    color: #252525;
+}
+
+#profile-container input[type=radio] {
+    display: none;
+}
+
+#profile-container>table {
+    margin: auto;
+    margin-bottom: 16px;
+}
+
+#profile-header {
+    margin-bottom: 24px;
+    width: 100%;
+}
+
+#profile-header #picture-container {
+    height: 160px;
+    width: 160px;
+    margin: auto;
+    margin-bottom: 16px;
+}
+
+#profile-header #picture-container img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+#profile-header #username-container {
+    margin-bottom: 8px;
+}
+
+#profile-header h3 {
+    font-size: 2em;
+    margin: 0;
+}
+
+#profile-header h4 {
+    font-size: 1.4em;
+    margin: 0;
+}
+
+#table-left {
+    width: 240px;
+}
+
+#table-right {
+    width: 500px;
+}
+
+#profile-container table td {
+    vertical-align: top;
+}
+
+#profile-container .profile-menu {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 8px;
+}
+
+#profile-container .profile-menu2 {
+    display: none;
+}
+
+#profile-container .profile-menu label {
+    cursor: pointer;
+}
+
+#profile-container .profile-menu i {
+    padding-top: 9.6px;
+    padding-left: 11px;
+    background: #252525;
+    font-size: 1.3em;
+    color: #FFF;
+    height: 30.4px;
+    width: 29px;
+    float: left;
+    margin: 0;
+}
+
+#profile-container .profile-menu p {
+    float: left;
+    margin: 0;
+    padding-top: 9px;
+    padding-left: 11px;
+    font-size: 1.1em;
+    color: #252525;
+    box-shadow: inset 0px 0px 0px 3px #252525;
+    height: 31px;
+    width: 189px;
+}
+
+#profile-container input[id="reviews"]:checked ~ table label[for="reviews"] p,
+#profile-container input[id="datas"]:checked ~ table label[for="datas"] p,
+#profile-container input[id="purchases"]:checked ~ table label[for="purchases"] p,
+#profile-container input[id="settings"]:checked ~ table label[for="settings"] p {
+    background-color: #252525;
+    color: #FFF;
+}
+
+#review-container,
+#data-container,
+#purchase-container,
+#setting-container {
+    display: none;
+}
+
+#profile-container input[id="reviews"]:checked ~ table #review-container,
+#profile-container input[id="datas"]:checked ~ table #data-container,
+#profile-container input[id="purchases"]:checked ~ table #purchase-container,
+#profile-container input[id="settings"]:checked ~ table #setting-container {
+    display: block;
+}
+
+.profile-data {
+    margin-left: 32px;
+}
+
+.profile-data h4 {
+    margin: 0;
+    text-align: center;
+    font-size: 1.3em;
+    color: #252525;
+    text-align: center;
+}
+
+.review-content,
+.purchase-content {
+    box-shadow: inset 0px 0px 0px 2px #ecf0f1;
+    margin-bottom: 12px;
+}
+
+.review-content p {
+    padding-right: 14px;
+}
+
+.review-content td[rowspan="2"] p {
+    padding-bottom: 14px;
+}
+
+.review-writer {
+    padding-top: 14px;
+    padding-bottom: 6px;
+    padding-right: 14px;
+}
+
+.purchase-date,
+.purchase-for,
+.purchase-price {
+    height: 19px;
+    padding-right: 14px;
+}
+
+.purchase-place {
+    padding-top: 8px;
+    height: 40px;
+}
+
+.purchase-place p {
+    font-size: 1.1em;
+}
+
+.review-writer p,
+.review-rating p {
+    margin: 0px;
+}
+
+.review-rating i {
+    color: #f1c40f;
+}
+
+.review-picture,
+.purchase-picture {
+    height: 100px;
+    width: 100px;
+    padding-top: 14px;
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-bottom: 6px;
+}
+
+.purchase-picture {
+    padding-bottom: 14px;
+}
+
+.review-picture img,
+.purchase-picture img {
+    height: 100%;
+    width: 100%;
+}
+
+.review-rating {
+    height: 20px;
+    padding-right: 14px;
+    padding-bottom: 6px;
+}
+
+.review-tool {
+    padding-left: 14px;
+    padding-bottom: 14px;
+}
+
+.review-tool p {
+    font-size: 0.85em;
+    margin: 0px;
+    margin-bottom: 4px;
+}
+
+.profile-data {
+    width: 100%;
+}
+
+#data-container {
+    box-shadow: inset 0px 0px 0px 2px #ecf0f1;
+}
+
+#data-container table {
+    padding: 14px;
+    margin-bottom: 24px;
+}
+
+#data-container table td:first-child {
+    width: 120px;
+}
+
+#data-container table td {
+    padding-right: 12px;
+    padding-bottom: 8px;
+}
+
+#setting-container {
+    box-shadow: inset 0px 0px 0px 2px #ecf0f1;
+    text-align: center;
+    padding-bottom: 14px;
+}
+
+#setting-container>h6 {
+    margin: 0;
+    padding: 12px;
+    font-family: Pseudonym;
+    font-size: 1.2em;
+}
+
+#setting-container>#must-verify {
+    padding-top: 0;
+}
+
+#setting-container>table {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+#setting-container i {
+    font-size: 3em;
+    color: #252525;
+}
+
+#setting-container p {
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 14px;
+}
+
+#setting-container br {
+    line-height: 6px;
+}
+
+#setting-container #form-edit {
+    text-align: left;
+    width: 90%;
+    margin: auto;
+}
+
+#setting-container #form-edit td:first-child {
+    width: 100px;
+}
+
+#setting-container #form-edit td {
+    padding-bottom: 12px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+#setting-container #form-edit #back {
+    padding-bottom: 0;
+}
+
+#setting-container #form-edit td[colspan="3"] {
+    text-align: center;
+}
+
+#setting-container #form-edit td input[type="radio"] {
+    display: inherit;
+}
+
+#setting-container #form-edit td input[type="text"] {
+    height: 30px;
+    width: 100%;
+    border-radius: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-family: Open-Sans;
+    font-size: 0.9em;
+    border-style: none;
+    margin: 0;
+    margin-left: 6px;
+    box-shadow: inset 0px 0px 0px 1px #252525;
+}
+
+#setting-container form {
+    margin: 0;
+}
+
+#setting-container form input[type="submit"] {
+    margin-top: 16px;
+    margin-bottom: 12px;
+    height: 28px;
+    width: 140px;
+    background-color: #252525;
+    color: #fff;
+    font-family: Pseudonym;
+    font-size: 1em;
+    border-style: none;
+    cursor: pointer;
+}
+
+#setting-container #form-edit input[type="submit"] {
+    margin-top: 6px;
+    margin-bottom: 0;
+}
+
+#setting-container form input[type="submit"]:hover {
+    background-color: #fff;
+    color: #252525;
+    box-shadow: inset 0px 0px 0px 2px #252525;
+}
+
+#setting-container form p {
+    margin: 10px 0px 0px;
+}
+
+@media only screen and (max-width: 924px) {
+    #table-left {
+        display: table;
+        width: 100%;
+        margin-bottom: 12px;
+    }
+    #table-right {
+        display: table;
+        width: 500px;
+        margin-bottom: 12px;
+    }
+    #profile-container .profile-menu p {
+        width: 449px;
+    }
+    .profile-data {
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 625px) {
+    #profile-container > table {
+        width: 100%;
+    }
+    #table-left,
+    #table-right {
+        width: 100%;
+    }
+    #table-left {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #profile-container .profile-menu {
+        display: none;
+    }
+    #profile-container .profile-menu2 {
+        display: block;
+        height: 40px;
+        width: 25%;
+        float: left;
+        text-align: center;
+        font-size: 1.5em;
+        cursor: pointer;
+    }
+    #profile-container .profile-menu2 i {
+        padding-top: 8px;
+        display: block;
+        padding-bottom: 8px;
+        cursor: pointer;
+        color: #252525;
+        background-color: #fff;
+    }
+    #profile-container .profile-menu2 i:hover {
+        color: #fff;
+        background-color: #252525;
+    }
+    #profile-container input[id="reviews"]:checked ~ table label[for="reviews"] i,
+    #profile-container input[id="datas"]:checked ~ table label[for="datas"] i,
+    #profile-container input[id="purchases"]:checked ~ table label[for="purchases"] i,
+    #profile-container input[id="settings"]:checked ~ table label[for="settings"] i {
+        background-color: #252525;
+        color: #FFF;
+    }
+}

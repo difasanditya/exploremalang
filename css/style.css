@@ -1,0 +1,991 @@
+@font-face {
+    font-family: "Pseudonym";
+    src: url("fonts/pseudonym-regular.otf")
+}
+
+@font-face {
+    font-family: "Open-Sans";
+    src: url("fonts/opensans.ttf")
+}
+
+@keyframes sliding-header {
+    0% {
+        left: 0%;
+    }
+    15% {
+        left: 0%;
+    }
+    20% {
+        left: -100%;
+    }
+    35% {
+        left: -100%;
+    }
+    40% {
+        left: -200%;
+    }
+    55% {
+        left: -200%;
+    }
+    60% {
+        left: -300%;
+    }
+    75% {
+        left: -300%;
+    }
+    80% {
+        left: -400%;
+    }
+    95% {
+        left: -400%;
+    }
+    100% {
+        left: 0%;
+    }
+}
+
+body {
+    margin: 0;
+    min-height: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.unselectable {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+#menu,
+#menu-2 {
+    z-index: 998;
+    position: fixed;
+    width: 100%;
+    height: 40px;
+    background-color: #333;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid #252525;
+}
+
+#menu-2 {
+    z-index: 996;
+}
+
+#logo {
+    margin-left: 10%;
+    height: 100%;
+    width: 180px;
+    float: left;
+}
+
+#logo img {
+    margin-top: 5px;
+    height: 30px;
+    width: auto;
+}
+
+#link {
+    margin-right: 10%;
+    height: 100%;
+    float: right;
+}
+
+#link>ul {
+    margin-top: 9px;
+}
+
+#link>ul>li {
+    cursor: pointer;
+    margin-left: 20px;
+    list-style: none;
+    float: left;
+    color: #fff;
+    font-size: 1.1em;
+    font-family: Pseudonym;
+    font-weight: lighter;
+    background-color: #333;
+}
+
+#more-check,
+#verifications,
+#search,
+#login-check,
+#none,
+#signup-check,
+#forgot-check,
+#forgot-success-check,
+#subscribe-success-check {
+    display: none;
+}
+
+#unsubscribe-check,
+#unsubscribe-success-check,
+#reset-check,
+#reset-success-check,
+#verification-check,
+#verification-success-check,
+#review-new-success-check,
+#review-edit-success-check,
+#review-remove-success-check,
+#no-need-pay-check {
+    display: none;
+}
+
+#picture-edit-success-check,
+#profile-edit-success-check,
+#purchase-success-check,
+#purchase-error-check,
+#send-verification-error-check,
+#send-verification-success-check {
+    display: none;
+}
+
+#link form {
+    display: none;
+}
+
+#link>ul>li>a>label {
+    cursor: pointer;
+}
+
+#search-bar,
+#verification-bar {
+    position: fixed;
+    width: 100%;
+    background-color: #333;
+    border-bottom: 1px solid #252525;
+    transition: all 0.74s ease-in-out;
+}
+
+#search-bar {
+    z-index: 997;
+    top: 0;
+    left: 0;
+    height: 40px;
+}
+
+#verification-bar {
+    z-index: 995;
+    top: 41px;
+    left: 0;
+    height: 24px;
+}
+
+#verification-container {
+    height: 100%;
+    width: 80%;
+    margin: auto;
+    margin-top: 0;
+    font-family: Open-Sans;
+    font-size: 0.8em;
+    color: #FFF;
+    text-align: center;
+    position: relative;
+}
+
+#verification-container a {
+    cursor: pointer;
+}
+
+#verification-container a:hover {
+    color: #7f8c8d;
+}
+
+#verification-container label {
+    background-color: #e74c3c;
+    color: #FFF;
+    font-family: Pseudonym;
+    font-size: 1em;
+    display: block;
+    cursor: pointer;
+    padding: 4px;
+    transition: all 0.74s ease-in-out;
+}
+
+#verification-close {
+    display: block;
+}
+
+header>input[id=search]:checked ~ #search-bar {
+    top: 41px;
+}
+
+header>input[id=search]:checked ~ #verification-bar {
+    top: 82px;
+}
+
+header>input[id=verifications]:checked ~ #verification-bar {
+    top: -20px;
+}
+
+#search-bar table,
+#link table {
+    width: 60%;
+    height: 28px;
+    margin: auto;
+    margin-top: 6px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+#search-bar form input[type=text],
+#link form input[type=text] {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px 0 0 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-family: Open-Sans;
+    font-size: 0.8em;
+    border-style: none;
+    box-shadow: inset 0px 0px 0px 1px #ecf0f1;
+    float: left;
+}
+
+#search-bar form button,
+#link form button {
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    color: #333;
+    border-radius: 0 5px 5px 0;
+    font-family: Open-Sans;
+    font-size: 1.1em;
+    border-style: none;
+    border-left: solid 1px;
+    cursor: pointer;
+    float: left;
+}
+
+#header {
+    width: 100%;
+    height: 353px;
+    position: absolute;
+    left: 0;
+    text-align: center;
+    top: 41px;
+}
+
+#bg-head {
+    overflow: hidden;
+    height: 100%;
+}
+
+div#bg-head figure {
+    height: 100%;
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    text-align: left;
+    font-size: 0;
+    animation: 60s sliding-header infinite;
+}
+
+#image1,
+#image2,
+#image3,
+#image4,
+#image5 {
+    width: 20%;
+    height: 100%;
+    float: left;
+    background-image: url(img/header1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#image2 {
+    background-image: url(img/header2.jpg);
+}
+
+#image3 {
+    background-image: url(img/header3.jpg);
+}
+
+#image4 {
+    background-image: url(img/header4.jpg);
+}
+
+#image5 {
+    background-image: url(img/header5.jpg);
+}
+
+#header>h1 {
+    font-family: Pseudonym;
+    color: #FFF;
+    font-size: 4em;
+    margin-top: -245px;
+    position: relative;
+}
+
+#link>input[type="checkbox"] {
+    position: absolute;
+    left: -9999px;
+    left: -9999px;
+}
+
+#header>h2 {
+    color: #FFF;
+    font-size: 1.6em;
+    font-family: Pseudonym;
+    position: relative;
+    font-weight: lighter;
+    margin-top: -40px;
+}
+
+#header>h2>sup>i {
+    font-size: 0.5em !important;
+    margin-top: -15px;
+}
+
+footer {
+    width: 100%;
+    height: 154px;
+    background-color: #252525;
+    display: block;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+}
+
+#footer {
+    width: 80%;
+    margin: auto;
+}
+
+#footer p {
+    font-family: Pseudonym;
+    font-size: 1.1em;
+}
+
+#footer-left,
+#footer-right {
+    width: 50%;
+    float: left;
+}
+
+.footer-head {
+    margin-top: 12px;
+}
+
+.footer-head p {
+    color: #FFF;
+    margin: 0;
+}
+
+.footer-content {
+    width: 80%;
+    margin: auto;
+    margin-top: 12px;
+}
+
+.social {
+    width: 12.5%;
+    min-width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: block;
+    cursor: pointer;
+    text-align: center;
+    color: #FFF;
+    float: left;
+}
+
+.footer-content .social p {
+    margin-top: 11.2px;
+}
+
+#facebook:hover {
+    background-color: #3b5998;
+}
+
+#google-plus:hover {
+    background-color: #dd4c40;
+}
+
+#foursquare:hover {
+    background-color: #fa4778;
+}
+
+#instagram:hover {
+    background-color: #2b5a83;
+}
+
+#pinterest:hover {
+    background-color: #bd081c;
+}
+
+#tumblr:hover {
+    background-color: #34506b;
+}
+
+#twitter:hover {
+    background-color: #5ea9dd;
+}
+
+#youtube:hover {
+    background-color: #de2824;
+}
+
+.footer-content input[type=text] {
+    height: 30px;
+    width: 80%;
+    border-radius: 5px 0 0 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-family: Open-Sans;
+    font-size: 0.8em;
+    border-style: none;
+    box-shadow: inset 0px 0px 0px 1px #ecf0f1;
+    float: left;
+}
+
+.footer-content button {
+    height: 30px;
+    width: 20%;
+    background-color: #ecf0f1;
+    border-radius: 0 5px 5px 0;
+    font-family: Open-Sans;
+    font-size: 1.1em;
+    border-style: none;
+    float: left;
+    cursor: pointer;
+}
+
+.footer-content>#input-error p {
+    color: #FFF;
+    font-size: 0.8em;
+    font-family: Open-Sans;
+    margin-top: 2px;
+}
+
+.footer-content #stop-newsletter {
+    font-family: Open-Sans;
+    font-size: 0.8em;
+    color: #FFF;
+    margin-top: 2px;
+}
+
+#stop-newsletter label {
+    cursor: pointer;
+}
+
+#stop-newsletter label:hover {
+    color: #7f8c8d;
+}
+
+#footer-bottom {
+    text-align: center;
+    float: left;
+    width: 100%;
+}
+
+#footer-bottom p {
+    margin: 0;
+    font-family: Open-Sans;
+    font-size: 0.8em;
+    color: #FFF;
+}
+
+
+/* Pop Up */
+
+body>input[id=login-check]:checked ~ #login,
+body>input[id=signup-check]:checked ~ #signup,
+body>input[id=forgot-check]:checked ~ #forgot,
+body>input[id=forgot-success-check]:checked ~ #forgot-success,
+body>input[id=subscribe-success-check]:checked ~ #subscribe-success,
+body>input[id=unsubscribe-check]:checked ~ #unsubscribe,
+body>input[id=unsubscribe-success-check]:checked ~ #unsubscribe-success,
+body>input[id=reset-check]:checked ~ #reset,
+body>input[id=reset-success-check]:checked ~ #reset-success,
+body>input[id=verification-check]:checked ~ #verification {
+    opacity: 1;
+    display: block;
+}
+
+body>input[id=verification-success-check]:checked ~ #verification-success,
+body>input[id=review-new-success-check]:checked ~ #review-new-success,
+body>input[id=review-edit-success-check]:checked ~ #review-edit-success,
+body>input[id=review-delete-success-check]:checked ~ #review-delete-success,
+body>input[id=no-need-pay-check]:checked ~ #no-need-pay {
+    opacity: 1;
+    display: block;
+}
+
+body>input[id=picture-edit-success-check]:checked ~ #picture-edit-success,
+body>input[id=profile-edit-success-check]:checked ~ #profile-edit-success,
+body>input[id=purchase-success]:checked ~ #purchase-success,
+body>input[id=purchase-error-check]:checked ~ #purchase-error,
+body>input[id=send-verification-error-check]:checked ~ #send-verification-error,
+body>input[id=send-verification-success-check]:checked ~ #send-verification-success {
+    opacity: 1;
+    display: block;
+}
+
+body>input[id=none]:checked ~ #login,
+body>input[id=none]:checked ~ #signup,
+body>input[id=none]:checked ~ #forgot,
+body>input[id=none]:checked ~ #forgot-success,
+body>input[id=none]:checked ~ #subscribe-success,
+body>input[id=none]:checked ~ #unsubscribe,
+body>input[id=none]:checked ~ #unsubscribe-success,
+body>input[id=none]:checked ~ #reset,
+body>input[id=none]:checked ~ #reset-success,
+body>input[id=none]:checked ~ #verification {
+    opacity: 0;
+    display: none;
+}
+
+body>input[id=none]:checked ~ #verification-success,
+body>input[id=none]:checked ~ #review-new-success,
+body>input[id=none]:checked ~ #review-edit-success,
+body>input[id=none]:checked ~ #review-delete-success,
+body>input[id=none]:checked ~ #no-need-pay {
+    opacity: 0;
+    display: none;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 400ms;
+    display: none;
+    opacity: 0;
+    z-index: 999;
+}
+
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup {
+    margin: 150px auto;
+    padding: 20px 0 0 0;
+    background: #fff;
+    border-radius: 5px;
+    width: 330px;
+    position: relative;
+    font-family: Open-Sans;
+    font-size: 0.9em;
+    color: #252525;
+    text-align: center;
+}
+
+.popup label {
+    cursor: pointer;
+}
+
+.popup>label {
+    width: 24px;
+    height: 24px;
+    border-style: none;
+    border-radius: 50%;
+    background-color: #e74c3c;
+    color: #FFF;
+    font-family: Pseudonym;
+    font-size: 1.25em;
+    position: absolute;
+    right: 6px;
+    top: 6px;
+}
+
+.popup>label:hover {
+    background-color: #FFF;
+    color: #e74c3c;
+    box-shadow: inset 0px 0px 0px 1px #e74c3c;
+}
+
+.popup h4 {
+    font-size: 1.3em;
+    margin-top: -5px;
+    margin-bottom: 16px;
+}
+
+.popup form {
+    margin: 0;
+}
+
+.popup .content {
+    max-height: 40%;
+    overflow: hidden;
+    width: 80%;
+    margin: auto;
+}
+
+.login-row,
+.signup-row,
+.forgot-row,
+.unsubscribe-row,
+.reset-row,
+.verification-row {
+    width: 290px;
+    height: 30px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.forgot-row2,
+.forgot-success-row,
+.unsubscribe-row2,
+.reset-success-row,
+.verification-error-row,
+.verification-success-row {
+    width: 290px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.verification-error-row a:hover {
+    color: #95a5a6;
+}
+
+.login-content,
+.signup-content,
+.forgot-content,
+.reset-content,
+.verification-content {
+    height: 100%;
+    float: left;
+}
+
+.login-content-left,
+.signup-content-left,
+.reset-content-left,
+.verification-content-left {
+    width: 80px;
+    margin: 0;
+    margin-right: 4px;
+}
+
+.login-content-left p,
+.signup-content-left p,
+.forgot-row p,
+.reset-content-left p,
+.verification-content-left p {
+    margin: 0;
+    margin-top: 5.5px;
+    text-align: left;
+}
+
+.forgot-success-row p,
+.reset-success-row p {
+    margin-bottom: 10px;
+    margin: 0;
+    margin-top: 5.5px;
+    text-align: center;
+}
+
+.login-content-right,
+.signup-content-right,
+.reset-content-right,
+.verification-content-right {
+    width: 200px;
+}
+
+.reset-success-row {
+    padding-bottom: 20px;
+}
+
+.login-content input[type=text],
+.login-content input[type=password],
+.signup-content input[type=text],
+.signup-content input[type=password],
+.forgot-row input[type=text],
+.unsubscribe-row input[type=text],
+.reset-content input[type=text],
+.reset-content input[type=password],
+.verification-content input[type=text],
+.verification-content input[type=password] {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-family: Open-Sans;
+    font-size: 1em;
+    border-style: none;
+    box-shadow: inset 0px 0px 0px 1px #34495e;
+    float: left;
+}
+
+.popup input[type=submit] {
+    width: 100px;
+    height: 30px;
+    border-style: none;
+    background-color: #252525;
+    color: #FFF;
+    font-family: Pseudonym;
+    font-size: 1.2em;
+    margin-top: 4px;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+#forgot .popup input[type=submit] {
+    width: 150px;
+}
+
+#unsubscribe .popup input[type=submit] {
+    width: 200px;
+}
+
+.popup input[type=submit]:hover {
+    background-color: #FFF;
+    color: #252525;
+    box-shadow: inset 0px 0px 0px 1px #252525;
+}
+
+#input-error {
+    width: 100%;
+    color: #c0392b;
+}
+
+#login-helper,
+#signup-helper {
+    width: 87%;
+    margin: auto;
+    height: 30px;
+}
+
+#dont-have {
+    float: left;
+}
+
+#forgot-pass {
+    float: right;
+}
+
+#input-error p,
+#dont-have,
+#forgot-pass {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+#dont-have:hover,
+#forgot-pass:hover {
+    color: #7f8c8d;
+}
+
+
+/* Responsive Section */
+
+@media only screen and (max-width: 999px) {
+    .social {
+        width: 25%;
+        min-width: 40px;
+        height: 40px;
+    }
+    footer {
+        height: 163px;
+    }
+    #footer-bottom p {
+        margin-top: 8px;
+    }
+}
+
+@media only screen and (max-width: 877px) {
+    #menu {
+        z-index: 996;
+    }
+    #menu-2 {
+        z-index: 998;
+    }
+    #link>ul {
+        display: block;
+        height: 100%;
+        transition: all 0.7s ease-in-out;
+        left: 32px;
+        width: 100%;
+        position: absolute;
+        left: -60px;
+        top: -255px;
+    }
+    #link>ul>li {
+        margin-left: 20px;
+        width: 100%;
+        height: 40px;
+        border-bottom: 1px solid #252525;
+        text-align: center;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    #link>ul>li:hover {
+        background-color: #252525;
+    }
+    #link>label {
+        font-size: 1.5em;
+        width: 100%;
+        color: #FFF;
+        font-family: Pseudonym;
+        background-color: #333;
+        text-align: right;
+        margin-top: 8px;
+        cursor: pointer;
+        display: inherit;
+    }
+    header > input[id="more-check"]:checked ~ #menu>#link>ul {
+        top: 32px;
+    }
+    header > input[id="more-check"]:checked ~ #verification-bar {
+        top: 246px;
+    }
+    #link a {
+        display: block;
+        height: 31px;
+        padding-top: 9px;
+    }
+    #link a label {
+        display: block;
+        height: 31px;
+        width: 100%;
+    }
+    #search-bar {
+        display: none;
+    }
+    #search-label {
+        display: none;
+    }
+    #link > ul > li > a > label {
+        padding-top: 9px;
+        margin-top: -9px;
+    }
+    #link form {
+        display: inherit;
+    }
+    header > input[id="search"]:checked ~ #verification-bar {
+        top: 41px;
+    }
+    header > input[id="verification"]:checked ~ #verification-bar {
+        top: -20px;
+    }
+}
+
+@media only screen and (max-width: 739px) {
+    #verification-bar {
+        height: 40px;
+    }
+    #verification-container label {
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+}
+
+@media only screen and (max-width: 737px) {
+    footer {
+        height: 178px;
+    }
+}
+
+@media only screen and (max-width: 709px) {
+    #verification-container p {
+        margin-top: 2px;
+    }
+}
+
+@media only screen and (max-width: 566px) {
+    #header>h1 {
+        margin-top: -296px;
+    }
+}
+
+@media only screen and (max-width: 507px) {
+    #footer-left,
+    #footer-right {
+        width: 100%;
+    }
+    footer {
+        height: 278px;
+    }
+    #footer-bottom p {
+        margin-top: 0;
+    }
+}
+
+@media only screen and (max-width: 392px) {
+    #verification-bar {
+        height: 60px;
+    }
+    #verification-container label {
+        padding-top: 22px;
+        padding-bottom: 22px;
+    }
+}
+
+@media only screen and (max-width: 368px) {
+    footer {
+        height: 297px;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .popup {
+        width: 280px;
+    }
+    .login-row,
+    .signup-row,
+    .forgot-row,
+    .unsubscribe-row,
+    .unsubscribe-row2 {
+        width: 254px;
+    }
+    .login-content-right,
+    .signup-content-right {
+        width: 170px;
+    }
+    .forgot-row,
+    .forgot-row2 {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-height: 560px) {
+    .popup {
+        margin: 100px auto;
+    }
+}
+
+@media only screen and (max-height: 500px) {
+    .popup {
+        margin: 70px auto;
+    }
+}
+
+@media only screen and (max-height: 440px) {
+    .popup {
+        margin: 40px auto;
+    }
+}
+
+@media only screen and (max-height: 440px) {
+    #signup .popup {
+        margin: 20px auto;
+    }
+}
+
+@media only screen and (max-height: 372px) {
+    #signup .popup {
+        margin: 10px auto;
+    }
+}
+
+@media only screen and (max-height: 362px) {
+    #signup .popup {
+        margin: 2px auto;
+    }
+}
